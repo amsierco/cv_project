@@ -18,7 +18,7 @@ export default class General extends Component {
         };
     }
 
-    // Assigned form info and resets form
+    // Assigns form info and resets form
     onSubmit = (e) => {
         e.preventDefault();
         const { tempData } = this.state;
@@ -50,9 +50,7 @@ export default class General extends Component {
                     onChange={
                         ((e) => {
                             this.setState({
-                                tempData: {
-                                    name: e.target.value 
-                                }
+                                tempData: {name: e.target.value}
                             });
                         })}
                 />
@@ -64,9 +62,7 @@ export default class General extends Component {
                     onChange={
                         ((e) => {
                             this.setState({
-                                tempData: {
-                                    email: e.target.value 
-                                }
+                                tempData: {email: e.target.value} 
                             });
                         })}
                 />
@@ -78,9 +74,7 @@ export default class General extends Component {
                     onChange={
                         ((e) => {
                             this.setState({
-                                tempData: {
-                                    phoneNum: e.target.value 
-                                }
+                                tempData: {phoneNum: e.target.value} 
                             });
                         })}
                 />
