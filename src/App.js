@@ -4,12 +4,16 @@ import Education from './components/Education';
 import Practical from './components/Practical';  
 import Overview from './components/Overview';
 
+import './styles/form.css';
+
 class App extends Component{
   constructor(props){
     super(props);
     this.setParentState.bind(this);
+    this.switchDisplay.bind(this);
     this.state = {
-        name: '',
+        first: '',
+        last: '',
         email: '',
         phoneNum: '',
         schoolName: '',
@@ -20,7 +24,8 @@ class App extends Component{
         position: '',
         duties: '',
         workStart: '',
-        workEnd: ''
+        workEnd: '',
+        edit: true
     };
   }
 
@@ -28,12 +33,30 @@ class App extends Component{
     this.setState({[key]:newState});
   }
 
+  switchDisplay = () => {
+    this.setState({
+      edit: !this.state.edit
+    });
+  }
+
   render(){
     return (<>
-      <General setParentState={this.setParentState}/> 
-      <Education setParentState={this.setParentState}/> 
-      <Practical setParentState={this.setParentState}/> 
-      <Overview name={this.state.name}/>
+      {!this.state.edit ?
+      <div className='overview'><main>
+        <Overview {...this.state}/>
+        <button onClick={this.switchDisplay} className='edit-btn'>Edit Form</button>
+      </main></div>
+      : 
+      <div className='forms'><main>
+        <General setParentState={this.setParentState} {...this.state}/> 
+        <br/>
+        <Education setParentState={this.setParentState} {...this.state}/> 
+        <br/>
+        <Practical setParentState={this.setParentState} {...this.state}/>
+        <br/>
+        <br/>
+        <button onClick={this.switchDisplay} className='submit-btn'>Submit</button>
+      </main></div> }
     </>);
   }
 }
