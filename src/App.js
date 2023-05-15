@@ -16,6 +16,7 @@ class App extends Component{
         last: '',
         email: '',
         phoneNum: '',
+        address: '',
         schoolName: '',
         studyTitle: '',
         studyStart: '',
@@ -42,10 +43,10 @@ class App extends Component{
   render(){
     return (<>
       {!this.state.edit ?
-      <div className='overview'><main>
+      <div>
         <Overview {...this.state}/>
         <button onClick={this.switchDisplay} className='edit-btn'>Edit Form</button>
-      </main></div>
+      </div>
       : 
       <div className='forms'><main>
         <General setParentState={this.setParentState} {...this.state}/> 

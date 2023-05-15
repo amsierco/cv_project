@@ -63,6 +63,20 @@ class General extends Component {
                         id='phone-num'
                     />
                 </div>
+                <div>
+                    <label htmlFor="address">Home Address</label>
+                    <input
+                        onChange={
+                            (e => {
+                                setParentState('address', e.target.value);
+                            })
+                        }
+                        type='text'
+                        placeholder="Address"
+                        value={this.props.address}
+                        id='address'
+                    />
+                </div>
             </form>
         </>);
     }

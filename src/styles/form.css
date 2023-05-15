@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Skranji&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Pacifico&display=swap');
 *,
 *::before,
 *::after {
@@ -8,12 +8,16 @@
     box-sizing: border-box;
 }
 
-#root {
-    font-family: Ubuntu, sans-serif;
+body {
+    font-family: Ubuntu, Nunito, sans-serif;
     height: 100vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
+    --primary: #f97b22;
+    --secondary: #ffa559;
+    --accent: #ffe6c7;
+    background-color: green;
 }
 
 #root > div {
@@ -22,7 +26,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: .75rem;
+    /* padding: .75rem; */
 }
 
 main {
@@ -88,4 +92,93 @@ form > div > label {
     border: 2px solid #141301;
     border-radius: .25rem;
     background: transparent;
+}
+
+/* Overview */
+.wrapper {
+    width: 100vw;
+    height: 100vh;  
+}
+  
+.overview {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: Nunito;
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+
+.sidebar {
+    height: 100%;
+    width: 35%;
+    background-color: var(--primary);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overview-content {
+    height: 100%;
+    width: 65%;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.photo {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 0px 3px 4px 2px rgba(0,0,0,0.5);
+}
+
+.overview .general{
+    font-size: 1.1rem;
+}
+
+.overview .email,
+.overview .phone,
+.overview .address{
+    display: grid;
+    grid-template-columns: 15% auto;
+    align-items: center;
+}
+
+.name {
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-size: 1.9rem;
+}
+
+.overview .education,
+.overview .work{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.education-header,
+.work-header{
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-items: center;
+    border-bottom: 2px solid var(--primary);
+    font-size: 1.4rem;
+    width: 100%;
+    font-weight: 600;
+}
+
+.education-header > i,
+.work-header > i {
+    color: var(--primary);
+}
+
+.overview-header {
+    position: relative;
+    z-index: 1;
 }
