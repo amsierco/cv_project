@@ -17,7 +17,6 @@ body {
     --primary: #f97b22;
     --secondary: #ffa559;
     --accent: #ffe6c7;
-    background-color: green;
 }
 
 #root {
@@ -31,7 +30,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /* padding: .75rem; */
 }
 
 main {
@@ -49,21 +47,13 @@ main {
     width: 100%;
     height: 100%;
 }
-/* 
-form {
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2%;
-} */
 
 form {
     display: grid;
 }
 
 .general-form {
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
 }
 
 .education-form {
@@ -107,13 +97,21 @@ form > div > label {
 .submit-btn,
 .edit-btn {
     margin: 0 auto;
-    min-width: max(300px, 30%);
+    min-width: min(300px, 30%);
+    height: min(250px, 60%);
     padding: .5rem;
     font-size: 1.5rem;
     font-weight: 800;
     border: 2px solid #141301;
-    border-radius: .25rem;
+    border-radius: .4rem;
     background: transparent;
+}
+
+.submit-btn:hover,
+.edit-btn:hover {
+    transition: all ease-out 2ms;
+    transform: translateY(2px);
+
 }
 
 /* Overview */
@@ -205,4 +203,9 @@ form > div > label {
 
 .overview .edit-btn {
     grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--accent);
 }

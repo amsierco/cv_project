@@ -16,7 +16,7 @@ class General extends Component {
                             })
                         }
                         type='text'
-                        placeholder="First Name"
+                        placeholder="Enter first name"
                         value={this.props.first}
                         id='first'
                     />
@@ -30,7 +30,7 @@ class General extends Component {
                             })
                         }
                         type='text'
-                        placeholder="Last Name"
+                        placeholder="Enter last name"
                         value={this.props.last}
                         id='last'
                     />
@@ -44,7 +44,7 @@ class General extends Component {
                             })
                         }
                         type='email'
-                        placeholder="Email"
+                        placeholder="Enter email"
                         value={this.props.email}
                         id='email'
                     />
@@ -58,7 +58,7 @@ class General extends Component {
                             })
                         }
                         type='tel'
-                        placeholder="Phone Number"
+                        placeholder="Enter phone number"
                         value={this.props.phoneNum}
                         id='phone-num'
                     />
@@ -72,7 +72,7 @@ class General extends Component {
                             })
                         }
                         type='text'
-                        placeholder="Address"
+                        placeholder="Enter address"
                         value={this.props.address}
                         id='address'
                     />

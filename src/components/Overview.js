@@ -10,11 +10,13 @@ class Overview extends Component{
             />
                 <div className="sidebar">
                 <div className="general">
-                    <img
-                    src={this.props.photo}
-                    alt="Profile"
-                    className="photo"
-                    />
+                    {this.props.photo !== '' ? 
+                        <img
+                        src={this.props.photo}
+                        alt=""
+                        className="photo"
+                        />
+                    : null}
                     <div className="name">{this.props.first} {this.props.last}</div>
                     <div className="email">{this.props.email !== '' ? 
                     <><i className="fa-regular fa-envelope" />

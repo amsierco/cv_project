@@ -46,7 +46,7 @@ class App extends Component{
       {!this.state.edit ?
       <div className='overview'>
         <Overview {...this.state}/>
-        <button onClick={this.switchDisplay} className='edit-btn'>Edit Form</button>
+        <button onClick={this.switchDisplay} className='edit-btn'><i class="fa-solid fa-pen"></i>Edit Form</button>
       </div>
       : 
       <div className='forms'><main>

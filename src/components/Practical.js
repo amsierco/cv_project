@@ -16,7 +16,7 @@ export default class Practical extends Component {
                             })
                         }
                         type='text'
-                        placeholder="Company Name"
+                        placeholder="Enter company name"
                         value={this.props.companyName}
                         id='work-name'
                     />
@@ -30,7 +30,7 @@ export default class Practical extends Component {
                             })
                         }
                         type='text'
-                        placeholder="Position Title"
+                        placeholder="Enter position title"
                         value={this.props.position}
                         id='work-title'
                     />
@@ -44,7 +44,7 @@ export default class Practical extends Component {
                             })
                         }
                         type='text'
-                        placeholder="Official Duties"
+                        placeholder="Enter official duties"
                         value={this.props.duties}
                         id='duties'
                     />
@@ -58,7 +58,7 @@ export default class Practical extends Component {
                             })
                         }
                         type='text'
-                        placeholder="From"
+                        placeholder="Enter start year"
                         value={this.props.workStart}
                         id='work-start'
                     />
@@ -72,7 +72,7 @@ export default class Practical extends Component {
                             })
                         }
                         type='text'
-                        placeholder="To"
+                        placeholder="Enter end year"
                         value={this.props.workEnd}
                         id='work-end'
                     />

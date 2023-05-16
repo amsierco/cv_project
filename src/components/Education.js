@@ -16,7 +16,7 @@ export default class Education extends Component {
                             })
                         }
                         type='text'
-                        placeholder="School Name"
+                        placeholder="Enter school name"
                         value={this.props.schoolName}
                         id='school-name'
                     />
@@ -30,7 +30,7 @@ export default class Education extends Component {
                             })
                         }
                         type='text'
-                        placeholder="Title of Study"
+                        placeholder="Enter program title"
                         value={this.props.studyTitle}
                         id='school-study'
                     />
@@ -44,7 +44,7 @@ export default class Education extends Component {
                             })
                         }
                         type='text'
-                        placeholder="From"
+                        placeholder="Enter start year"
                         value={this.props.studyStart}
                         id='study-start'
                     />
@@ -58,7 +58,7 @@ export default class Education extends Component {
                             })
                         }
                         type='text'
-                        placeholder="To"
+                        placeholder="Enter end year"
                         value={this.props.studyEnd}
                         id='study-end'
                     />
