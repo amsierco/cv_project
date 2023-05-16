@@ -6,7 +6,7 @@ export default class Practical extends Component {
         return (<>
             <h2 className="form-label">Employment Information</h2>
             <br/>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className='work-form'>
                 <div>
                     <label htmlFor="work-name">Company Name</label>
                     <input
@@ -57,7 +57,7 @@ export default class Practical extends Component {
                                 setParentState('workStart', e.target.value);
                             })
                         }
-                        type='date'
+                        type='text'
                         placeholder="From"
                         value={this.props.workStart}
                         id='work-start'
@@ -71,7 +71,7 @@ export default class Practical extends Component {
                                 setParentState('workEnd', e.target.value);
                             })
                         }
-                        type='date'
+                        type='text'
                         placeholder="To"
                         value={this.props.workEnd}
                         id='work-end'

@@ -17,6 +17,7 @@ class App extends Component{
         email: '',
         phoneNum: '',
         address: '',
+        photo: '',
         schoolName: '',
         studyTitle: '',
         studyStart: '',
@@ -43,7 +44,7 @@ class App extends Component{
   render(){
     return (<>
       {!this.state.edit ?
-      <div>
+      <div className='overview'>
         <Overview {...this.state}/>
         <button onClick={this.switchDisplay} className='edit-btn'>Edit Form</button>
       </div>

@@ -6,7 +6,7 @@ export default class Education extends Component {
         return (<>
             <h2 className="form-label">Education Information</h2>
             <br/>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className='education-form'>
                 <div>
                     <label htmlFor="school-name">School's Name</label>
                     <input
@@ -43,7 +43,7 @@ export default class Education extends Component {
                                 setParentState('studyStart', e.target.value);
                             })
                         }
-                        type='date'
+                        type='text'
                         placeholder="From"
                         value={this.props.studyStart}
                         id='study-start'
@@ -57,7 +57,7 @@ export default class Education extends Component {
                                 setParentState('studyEnd', e.target.value);
                             })
                         }
-                        type='date'
+                        type='text'
                         placeholder="To"
                         value={this.props.studyEnd}
                         id='study-end'

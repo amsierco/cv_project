@@ -6,7 +6,7 @@ class General extends Component {
         return (<>
             <h2 className="form-label">General Information</h2>
             <br/>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className='general-form'>
                 <div>
                     <label htmlFor="first">First Name</label>
                     <input
@@ -75,6 +75,21 @@ class General extends Component {
                         placeholder="Address"
                         value={this.props.address}
                         id='address'
+                    />
+                </div>
+                <div>
+                    <label htmlFor="photo">Photo</label>
+                    <input
+                        onChange={
+                            (e => {
+                                if(e.target.files && e.target.files[0]){
+                                    setParentState('photo', URL.createObjectURL(e.target.files[0]));
+                                }
+                            })
+                        }
+                        type='file'
+                        accept=".jpg, .jpeg, .png"
+                        id='photo'
                     />
                 </div>
             </form>
