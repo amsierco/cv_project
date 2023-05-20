@@ -4,35 +4,21 @@ class General extends Component {
     render() {
         const {setParentState} = this.props;
         return (<>
-            <h2 className="form-label">General Information</h2>
+            <h2 className="form-title">General Information</h2>
             <br/>
             <form onSubmit={this.onSubmit} className='general-form'>
                 <div>
-                    <label htmlFor="first">First Name</label>
+                    <label htmlFor="name">Name</label>
                     <input
                         onChange={
                             (e => {
-                                setParentState('first', e.target.value);
+                                setParentState('name', e.target.value);
                             })
                         }
                         type='text'
-                        placeholder="Enter first name"
-                        value={this.props.first}
-                        id='first'
-                    />
-                </div>
-                <div>
-                    <label htmlFor="lst">Last Name</label>
-                    <input
-                        onChange={
-                            (e => {
-                                setParentState('last', e.target.value);
-                            })
-                        }
-                        type='text'
-                        placeholder="Enter last name"
-                        value={this.props.last}
-                        id='last'
+                        placeholder="Enter name"
+                        value={this.props.name}
+                        id='name'
                     />
                 </div>
                 <div>
@@ -50,7 +36,7 @@ class General extends Component {
                     />
                 </div>
                 <div>
-                    <label htmlFor="phone-num">Personal Phone Number</label>
+                    <label htmlFor="phone-num">Phone Number</label>
                     <input
                         onChange={
                             (e => {
@@ -63,21 +49,7 @@ class General extends Component {
                         id='phone-num'
                     />
                 </div>
-                <div>
-                    <label htmlFor="address">Home Address</label>
-                    <input
-                        onChange={
-                            (e => {
-                                setParentState('address', e.target.value);
-                            })
-                        }
-                        type='text'
-                        placeholder="Enter address"
-                        value={this.props.address}
-                        id='address'
-                    />
-                </div>
-                <div>
+                <div id="photo-input">
                     <label htmlFor="photo">Photo</label>
                     <input
                         onChange={
@@ -90,6 +62,20 @@ class General extends Component {
                         type='file'
                         accept=".jpg, .jpeg, .png"
                         id='photo'
+                    />
+                </div>
+                <div id="home-address">
+                    <label htmlFor="address">Home Address</label>
+                    <input
+                        onChange={
+                            (e => {
+                                setParentState('address', e.target.value);
+                            })
+                        }
+                        type='text'
+                        placeholder="Enter address"
+                        value={this.props.address}
+                        id='address'
                     />
                 </div>
             </form>

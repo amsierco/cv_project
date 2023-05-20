@@ -4,7 +4,7 @@ export default class Education extends Component {
     render() {
         const {setParentState} = this.props;
         return (<>
-            <h2 className="form-label">Education Information</h2>
+            <h2 className="form-title">Education Information</h2>
             <br/>
             <form onSubmit={this.onSubmit} className='education-form'>
                 <div>

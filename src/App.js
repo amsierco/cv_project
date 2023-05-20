@@ -12,8 +12,7 @@ class App extends Component{
     this.setParentState.bind(this);
     this.switchDisplay.bind(this);
     this.state = {
-        first: '',
-        last: '',
+        name: '',
         email: '',
         phoneNum: '',
         address: '',

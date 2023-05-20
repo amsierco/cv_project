@@ -4,7 +4,7 @@ export default class Practical extends Component {
     render() {
         const {setParentState} = this.props;
         return (<>
-            <h2 className="form-label">Employment Information</h2>
+            <h2 className="form-title">Employment Information</h2>
             <br/>
             <form onSubmit={this.onSubmit} className='work-form'>
                 <div>

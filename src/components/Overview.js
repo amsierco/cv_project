@@ -17,7 +17,7 @@ class Overview extends Component{
                         className="photo"
                         />
                     : null}
-                    <div className="name">{this.props.first} {this.props.last}</div>
+                    <div className="name">{this.props.name}</div>
                     <div className="email">{this.props.email !== '' ? 
                     <><i className="fa-regular fa-envelope" />
                         {this.props.email}
