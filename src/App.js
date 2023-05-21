@@ -51,7 +51,6 @@ class App extends Component{
       </div>
       : 
       <div className='forms'>
-        {/* <img src={require('./sergey-lapunin-unsplash.jpg')} alt='background'></img> */}
         <main>
           <General setParentState={this.setParentState} {...this.state}/> 
           <br/>
