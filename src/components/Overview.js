@@ -13,23 +13,26 @@ class Overview extends Component{
                     {this.props.photo !== '' ? 
                         <img
                         src={this.props.photo}
-                        alt=""
+                        alt="Profile"
                         className="photo"
                         />
                     : null}
                     <div className="name">{this.props.name}</div>
+                    <br/>
                     <div className="email">{this.props.email !== '' ? 
                     <><i className="fa-regular fa-envelope" />
                         {this.props.email}
                     </>
                         : null}
                     </div>
+                    <br/>
                     <div className="phone">{this.props.phoneNum !== '' ? 
                     <><i className="fa-solid fa-phone" />
                         {this.props.phoneNum}
                     </>
                         : null}
                     </div>
+                    <br/>
                     <div className="address">{this.props.address !== '' ?
                     <><i className="fa-solid fa-location-dot" />
                         {this.props.address}

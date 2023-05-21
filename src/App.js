@@ -45,19 +45,25 @@ class App extends Component{
       {!this.state.edit ?
       <div className='overview'>
         <Overview {...this.state}/>
-        <button onClick={this.switchDisplay} className='edit-btn'><i class="fa-solid fa-pen"></i>Edit Form</button>
+        <div className='edit-container'>
+          <button onClick={this.switchDisplay} className='edit-btn'><i class="fa-solid fa-pen"></i>Edit Form</button>
+        </div>
       </div>
       : 
-      <div className='forms'><main>
-        <General setParentState={this.setParentState} {...this.state}/> 
-        <br/>
-        <Education setParentState={this.setParentState} {...this.state}/> 
-        <br/>
-        <Practical setParentState={this.setParentState} {...this.state}/>
-        <br/>
-        <br/>
-        <button onClick={this.switchDisplay} className='submit-btn'>Submit</button>
-      </main></div> }
+      <div className='forms'>
+        {/* <img src={require('./sergey-lapunin-unsplash.jpg')} alt='background'></img> */}
+        <main>
+          <General setParentState={this.setParentState} {...this.state}/> 
+          <br/>
+          <br/>
+          <Education setParentState={this.setParentState} {...this.state}/> 
+          <br/>
+          <br/>
+          <Practical setParentState={this.setParentState} {...this.state}/>
+          <br/>
+          <button onClick={this.switchDisplay} className='submit-btn'>Submit</button>
+        </main>
+      </div> }
     </>);
   }
 }

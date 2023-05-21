@@ -36,20 +36,6 @@ export default class Practical extends Component {
                     />
                 </div>
                 <div>
-                    <label htmlFor="duties">Duties</label>
-                    <input
-                        onChange={
-                            (e => {
-                                setParentState('duties', e.target.value);
-                            })
-                        }
-                        type='text'
-                        placeholder="Enter official duties"
-                        value={this.props.duties}
-                        id='duties'
-                    />
-                </div>
-                <div>
                     <label htmlFor="work-start">Start Of Employment</label>
                     <input
                         onChange={
@@ -75,6 +61,20 @@ export default class Practical extends Component {
                         placeholder="Enter end year"
                         value={this.props.workEnd}
                         id='work-end'
+                    />
+                </div>
+                <div>
+                    <label htmlFor="duties">Duties</label>
+                    <input
+                        onChange={
+                            (e => {
+                                setParentState('duties', e.target.value);
+                            })
+                        }
+                        type='text'
+                        placeholder="Enter official duties"
+                        value={this.props.duties}
+                        id='duties'
                     />
                 </div>
             </form>

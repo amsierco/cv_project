@@ -50,7 +50,7 @@ class General extends Component {
                     />
                 </div>
                 <div id="photo-input">
-                    <label htmlFor="photo">Photo</label>
+                    <label htmlFor="photo-label">Photo</label>
                     <input
                         onChange={
                             (e => {
@@ -61,7 +61,7 @@ class General extends Component {
                         }
                         type='file'
                         accept=".jpg, .jpeg, .png"
-                        id='photo'
+                        id='photo-label'
                     />
                 </div>
                 <div id="home-address">
